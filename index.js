@@ -7,6 +7,10 @@ var textArea = document.querySelector('textarea')
 // Retrieve name and note content from cookies and localstorage
 // Then apply them to elements on the page
 // YOUR CODE HERE
+var span = localStorage.getItem('name')
+if (span) {
+  nameSpan.textContent = span + ""
+}
 
 formEl.onsubmit = function(e) {
   // prevents form submission
@@ -17,6 +21,7 @@ formEl.onsubmit = function(e) {
   var span = nameSpan.value
   var textarea = textArea.value
   console.log({span, textArea})
+  document.cookie = 'name=' + nameSpan.textContent + ';'
   localStorage.setItem('text', textArea)
 
   // triggers thumbs up animation
