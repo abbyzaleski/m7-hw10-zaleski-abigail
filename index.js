@@ -2,7 +2,7 @@
 var nameSpan = document.querySelector('span')
 var formEl = document.querySelector('form')
 var clear = document.querySelector('#clear')
-var textarea = document.querySelector('textarea')
+var textArea = document.querySelector('textarea')
 
 // Retrieve name and note content from cookies and localstorage
 // Then apply them to elements on the page
@@ -14,6 +14,10 @@ formEl.onsubmit = function(e) {
   // save name element's content to cookies
   // save textarea's content to localstorage
   // YOUR CODE HERE
+  var span = nameSpan.value
+  var textarea = textArea.value
+  console.log({span, textArea})
+  localStorage.setItem('text', textArea)
 
   // triggers thumbs up animation
   this.elements.save.classList.add('emoji')
