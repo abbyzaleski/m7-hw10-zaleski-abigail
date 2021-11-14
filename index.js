@@ -10,6 +10,8 @@ var textArea = document.querySelector('textarea')
 var span = localStorage.getItem('name')
 if (span) {
   nameSpan.textContent = span + ""
+} else {
+  nameSpan.textContent = 'anonymous'
 }
 
 formEl.onsubmit = function(e) {
