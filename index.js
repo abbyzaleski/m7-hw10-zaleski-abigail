@@ -2,17 +2,17 @@
 var nameSpan = document.querySelector('span')
 var formEl = document.querySelector('form')
 var clear = document.querySelector('#clear')
-var textArea = document.querySelector('textarea')
+var textarea = document.querySelector('textarea')
 
 // Retrieve name and note content from cookies and localstorage
 // Then apply them to elements on the page
 // YOUR CODE HERE
-var span = localStorage.getItem('name')
-if (span) {
-  nameSpan.textContent = span + ""
-} else {
-  nameSpan.textContent = 'anonymous'
-}
+// var span = localStorage.getItem('name')
+// if (span) {
+//   nameSpan.textContent = span + ""
+// } else {
+//   nameSpan.textContent = 'span'
+// }
 
 formEl.onsubmit = function(e) {
   // prevents form submission
@@ -20,11 +20,10 @@ formEl.onsubmit = function(e) {
   // save name element's content to cookies
   // save textarea's content to localstorage
   // YOUR CODE HERE
-  var span = nameSpan.value
-  var textarea = textArea.value
-  console.log({span, textArea})
-  document.cookie = 'name=' + nameSpan.textContent + ';'
-  localStorage.setItem('text', textArea)
+  var notes = document.getElementById('notes-area').value
+  console.log({notes})
+  document.cookie = document.querySelector('span')
+  localStorage.setItem('text', notes)
 
   // triggers thumbs up animation
   this.elements.save.classList.add('emoji')
