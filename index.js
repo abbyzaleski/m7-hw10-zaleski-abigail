@@ -22,7 +22,7 @@ formEl.onsubmit = function(e) {
   // YOUR CODE HERE
   var notes = document.getElementById('notes-area').value
   console.log({notes})
-  document.cookie = document.querySelector('span')
+  document.cookie = document.querySelector('span').innerText
   localStorage.setItem('text', notes)
 
   // triggers thumbs up animation
@@ -33,6 +33,8 @@ clear.onclick = function() {
   // Clear textarea's value
   // Clear localstorage's content
   // YOUR CODE HERE
+  textarea.value = ""
+  localStorage.setItem('text', textarea.value)
 
   // triggers thumbs up animation
   this.classList.add('emoji')
