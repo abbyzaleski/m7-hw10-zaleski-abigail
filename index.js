@@ -7,12 +7,12 @@ var textarea = document.querySelector('textarea')
 // Retrieve name and note content from cookies and localstorage
 // Then apply them to elements on the page
 // YOUR CODE HERE
-// var span = localStorage.getItem('name')
-// if (span) {
-//   nameSpan.textContent = span + ""
-// } else {
-//   nameSpan.textContent = 'span'
-// }
+textarea.value = localStorage.getItem('text')
+ if (document.cookie == "") {
+   nameSpan.textContent = 'Your Name'
+ } else {
+   nameSpan.innerText = document.cookie
+ }
 
 formEl.onsubmit = function(e) {
   // prevents form submission
